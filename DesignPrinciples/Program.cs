@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPrinciples.Open_ClosePrinciple
+namespace DesignPrinciples.Liskov_substitution_principle
 {
 
     class Program
@@ -9,13 +9,10 @@ namespace DesignPrinciples.Open_ClosePrinciple
         {
             Console.WriteLine("Welcome to Design Principles!");
 
-            double area;
-            Rectangle rect = new Rectangle();
-            area = rect.Area();
-            Console.WriteLine(" Area = "+area);
-            Circle c = new Circle();
-            area = c.Area();
-            Console.WriteLine(" Area = "+area);
+            Fruit fruit = new Orange();
+            Console.WriteLine(fruit.GetColor());
+            fruit = new Apple();
+            Console.WriteLine(fruit.GetColor());
         }
     }
 }
