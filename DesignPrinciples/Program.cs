@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPrinciples.Single_Responsiblity_Principle
+namespace DesignPrinciples.Open_ClosePrinciple
 {
 
     class Program
@@ -8,12 +8,14 @@ namespace DesignPrinciples.Single_Responsiblity_Principle
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Design Principles!");
-            
-            StudentData st = new StudentData();
-            st.ReadInput();
-            
-            ReportGeneration report = new ReportGeneration();
-            
+
+            double area;
+            Rectangle rect = new Rectangle();
+            area = rect.Area();
+            Console.WriteLine(" Area = "+area);
+            Circle c = new Circle();
+            area = c.Area();
+            Console.WriteLine(" Area = "+area);
         }
     }
 }
