@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPrinciples.Liskov_substitution_principle
+namespace DesignPrinciples.Interface_Segregation_Principle
 {
 
     class Program
@@ -9,10 +9,11 @@ namespace DesignPrinciples.Liskov_substitution_principle
         {
             Console.WriteLine("Welcome to Design Principles!");
 
-            Fruit fruit = new Orange();
-            Console.WriteLine(fruit.GetColor());
-            fruit = new Apple();
-            Console.WriteLine(fruit.GetColor());
+            ICar car = new Car();
+            car.Drive();
+            IAirplane  plane = new Airplane();
+            plane.Fly();
+
         }
     }
 }
